@@ -1,5 +1,5 @@
 
-Gusanito.elf:     file format elf32-littlearm
+Proyecto-4-Assembler.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -29,19 +29,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .debug_line   00000102  00000000  00000000  00002050  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_line_str 0000006d  00000000  00000000  00002152  2**0
+ 13 .debug_line_str 00000079  00000000  00000000  00002152  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_info   00000055  00000000  00000000  000021bf  2**0
+ 14 .debug_info   00000055  00000000  00000000  000021cb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_abbrev 00000038  00000000  00000000  00002214  2**0
+ 15 .debug_abbrev 00000038  00000000  00000000  00002220  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 00000048  00000000  00000000  00002250  2**3
+ 16 .debug_aranges 00000048  00000000  00000000  00002258  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    00000089  00000000  00000000  00002298  2**0
+ 17 .debug_str    00000095  00000000  00000000  000022a0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_rnglists 00000019  00000000  00000000  00002321  2**0
+ 18 .debug_rnglists 00000019  00000000  00000000  00002335  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_frame  0000002c  00000000  00000000  0000233c  2**2
+ 19 .debug_frame  0000002c  00000000  00000000  00002350  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:

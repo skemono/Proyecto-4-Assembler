@@ -33,34 +33,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Gusanito
+BUILD_ARTIFACT_NAME := Proyecto-4-Assembler
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Gusanito.elf \
+Proyecto-4-Assembler.elf \
 
 MAP_FILES += \
-Gusanito.map \
+Proyecto-4-Assembler.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Gusanito.list \
+Proyecto-4-Assembler.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Gusanito.elf secondary-outputs
+main-build: Proyecto-4-Assembler.elf secondary-outputs
 
 # Tool invocations
-Gusanito.elf Gusanito.map: $(OBJS) $(USER_OBJS) C:\Users\lordk\STM32CubeIDE\workspace_1.15.1\Gusanito\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Gusanito.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lordk\STM32CubeIDE\workspace_1.15.1\Gusanito\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gusanito.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Proyecto-4-Assembler.elf Proyecto-4-Assembler.map: $(OBJS) $(USER_OBJS) C:\Users\lordk\OneDrive\Documents\Assembler\Proyecto-4-Assembler\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Proyecto-4-Assembler.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\lordk\OneDrive\Documents\Assembler\Proyecto-4-Assembler\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Proyecto-4-Assembler.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -69,14 +69,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Gusanito.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Gusanito.list"
+Proyecto-4-Assembler.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Proyecto-4-Assembler.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Gusanito.elf Gusanito.list Gusanito.map default.size.stdout
+	-$(RM) Proyecto-4-Assembler.elf Proyecto-4-Assembler.list Proyecto-4-Assembler.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
